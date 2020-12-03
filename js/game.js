@@ -55,7 +55,7 @@ class Game{
                      x = 500-allPlayers[plr].distance;
                      y=500;
                      
-                     players[index -1].x = x;
+                     oooplayers[index -1].x = x;
                      players[index - 1].y = y;
                        
                      if(index === player.index){
