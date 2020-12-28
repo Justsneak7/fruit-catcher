@@ -1,6 +1,6 @@
 class Game{
     constructor(){
-        
+
     }
     getState() {
         var gameStateRef = database.ref('gameState');
@@ -41,12 +41,9 @@ class Game{
 
                 Player.getPlayerInfo();
                  image(back_img, 0, 0, 1000, 800);
-                 var score1=0;
-                 var score2=0;
                  var x =100;
                  var y=200;
                  var index =0;
-                 
                  drawSprites();
                  for(var plr in allPlayers){
                     
@@ -55,7 +52,7 @@ class Game{
                      x = 500-allPlayers[plr].distance;
                      y=500;
                      
-                     oooplayers[index -1].x = x;
+                     players[index -1].x = x;
                      players[index - 1].y = y;
                        
                      if(index === player.index){
@@ -63,14 +60,10 @@ class Game{
                          fill("black");
                          textSize(25);
                          text(allPlayers[plr].name ,x-25,y+25);
-                         
 
                          
                      }
-                     textSize(25);
-                     fill("white");
-                     text("Player 1 :" +allPlayers.player1.score,50,50);
-                    text("Player 2 :" + allPlayers.player2.score, 50, 100);
+                    
                      
                  
                  }
@@ -109,18 +102,9 @@ class Game{
                  
                   if (player.index !== null) {
                      //fill code here, to destroy the objects.
-                     for (var i = 0; i < fruitGroup.length; i++) {
-                        if (fruitGroup.get(i).isTouching(players)) {
-                            fruitGroup.get(i).destroy();
-                            player.score =player.score+1;
-                            player.update();
-                            
-                        }
-                        
-                    }
                   }
                 
-                  
+
          
          
         
